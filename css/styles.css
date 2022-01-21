@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+
+
+}
+
+nav{
+  color: #ecd009;
+  height: 60px;
+  font-size: 2rem;
+  align-items: center;
+  display: flex;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  justify-content: center;
+}
+nav ul{
+  list-style: none;
+}
+
+.gameContainer{
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.container{
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.box{
+  border: 2px solid #fff;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxtext{
+  color: #eb0cef;
+}
+.box:hover{
+  background-color: #ff0202;
+}
+.info{
+  font-size: 27px;
+}
+.gameinfo{
+  padding: 0 34px;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  color: #00ff1f;
+}
+
+.imgbox img{
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.br-0{
+  border-right: 0;
+}
+.bl-0{
+  border-left: 0;
+}
+.bt-0{
+  border-top: 0;
+}
+.bb-0{
+  border-bottom: 0;
+}
+
+.reset{
+    border-radius: 6px;
+    width: 75px;
+    height: 28px;
+    background-color:#000;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    padding: 2px;
+    color: #0cebe1;
+}
+.line{
+  background-color: #000;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  left: 172px;
+
+}
+.popup1 {
+  visibility: hidden;
+  color: #fff;
+  font-family: 'Coming Soon', cursive;
+}
+@media screen and (max-width:950px) {
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 34px;
+  }
+  .gameinfo h1{
+    font-size: 1.5rem;
+  }
+  .container{
+    display: grid;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+  .imgbox{
+    position: relative;
+    left: -27px;
+  }
+}
+.animator{
+  position: relative;
+  height: 3px;
+  width: 20px;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate{
+  0%{
+    left: 10px;
+    background-color: #09eccc;
+  }
+  25%{
+    background-color: #09ec25;
+    left: 400px;
+  }
+  50%{
+      left: 1250px;
+      background-color: #ff2f00;
+  }
+  75%{
+    left: 400px;
+    background-color: #ec7209;
+  }
+  100%{
+    left: 0px;
+   background-color: #feeb05;
+  }
+}
